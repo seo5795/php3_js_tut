@@ -50,7 +50,7 @@ if (isset($_POST['id'])&&isset($_POST['password'])) {
 		<div><input type="submit" value="로그인"></div>
 	</form>
 
-	<a href="regist.php">회원가입</a>
+	<a href="regist.html">회원가입</a>
 	<a href="find.php">계정찾기</a>
 
 
