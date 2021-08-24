@@ -15,13 +15,13 @@ if (isset($_POST['id'])&&isset($_POST['password'])) {
     //id를 입력한다면, 
   
     $filtered_id=mysqli_real_escape_string($conn, $_POST['id']);
-    $filtered_pw=mysqli_real_escape_string($conn, $_POST['password']);
+    $filtered_password=mysqli_real_escape_string($conn, $_POST['password']);
     //mysqli_real_escape_string($link, $string_to_escape)
     //사용자 입력 sql주입을 막아줌-> 보안문제 해결
   
     $sql = "SELECT * FROM amember
          WHERE id='{$filtered_id}' and 
-            password ='{$filtered_pw}'";
+            password ='{$filtered_password}'";
     
     $result = mysqli_query($conn, $sql) or die( mysqli_error($conn));
     
