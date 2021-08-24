@@ -13,7 +13,7 @@ $sql = "
         (ntitle, ncon)
         VALUES(
             '{$filtered['ntitle']}',
-            '{$filtered['ncon']}',
+            '{$filtered['ncon']}'
     )";
 $result = mysqli_query($conn, $sql);
 if($result === false){

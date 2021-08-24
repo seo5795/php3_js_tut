@@ -15,7 +15,7 @@
 			<form>
 
 				<input type="text" class="form-control"
-					id="name" name="ntitle" placeholder="제목을 입력해주세요." required
+					id="ntitle" name="ntitle" placeholder="제목을 입력해주세요." required
 					data-error="Please enter your name">
 		
 		</div>
@@ -23,17 +23,13 @@
 
 		<div padding="20px">
 
-			<textarea id="message" name="ncon"
-				value="${datas.ncon}" placeholder="공지사항 내용을 작성해주세요." rows="4"
+			<textarea id="ncon" name="ncon"
+			 placeholder="공지사항 내용을 작성해주세요." rows="4"
 				data-error="Write your message" required></textarea>
 
 			
 	</div>
 	<button id="submit" type="submit">공지사항 작성</button>
-	</form>
-	
-
-
 	</form>
 
 </body>
