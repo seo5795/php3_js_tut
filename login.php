@@ -12,7 +12,7 @@ $article = array(
 
 
 if (isset($_POST['id'])&&isset($_POST['password'])) {
-    //id를 입력한다면, 
+    //id password를 입력한다면, 
   
     $filtered_id=mysqli_real_escape_string($conn, $_POST['id']);
     $filtered_password=mysqli_real_escape_string($conn, $_POST['password']);

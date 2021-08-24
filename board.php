@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<form method="post" action="./newnoti.do">
+	<form method="post" action="proccess_regist_board.php">
 		<h2>공지사항</h2>
 		<div padding="20px">
 
@@ -23,7 +23,7 @@
 
 		<div padding="20px">
 
-			<textarea class="form-control" id="message" name="ncon"
+			<textarea id="message" name="ncon"
 				value="${datas.ncon}" placeholder="공지사항 내용을 작성해주세요." rows="4"
 				data-error="Write your message" required></textarea>
 
@@ -32,7 +32,7 @@
 	<button id="submit" type="submit">공지사항 작성</button>
 	</form>
 	
-	</center>
+
 
 	</form>
 
