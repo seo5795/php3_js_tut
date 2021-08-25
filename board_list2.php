@@ -11,7 +11,7 @@ $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetes
 <div id="board_area"> 
   <h1>자유게시판</h1>
   <h4>자유롭게 글을 쓸 수 있는 게시판입니다.</h4>
-    <table class="list-table">
+    <table class="list-table" border=1>
       <thead>
           <tr>
               <th width="70">번호</th>
@@ -40,8 +40,8 @@ $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetes
               $total_block = ceil($total_page/$block_ct); //블럭 총 개수
               $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
 
-              $sql2 = "SELECT * FROM ABOARD ORDER BY nid DESC LIMIT $start_num, $list";  
-              $result2 = mysqli_query($conn, $sql);
+              $sql2 = "SELECT * FROM aboard ORDER BY nid DESC LIMIT $start_num, $list";  
+              $result2 = mysqli_query($conn, $sql2);
               while($board = $result2->fetch_array()){
               $title=$board["ntitle"]; 
                 if(strlen($title)>30)//글자가 30 이상이라면 ..으로 변환
@@ -57,7 +57,7 @@ $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetes
           <td width="70"><?php echo $board['nid']; ?></td>
           <td width="500">
 			<a href='/page/board/read.php?nid=<?php echo $board["nid"]; ?>'><?php echo $title; ?><span>[<?php echo $rep_count; ?>]</span></a></td>
-          <td width="120"><?php echo $board['ntitle']?></td>
+          
           
         </tr>
       </tbody>
@@ -69,34 +69,34 @@ $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetes
         <?php
           if($page <= 1)
           { //만약 page가 1보다 크거나 같다면
-            echo "<div><li class='fo_re'>처음</li></div>"; //처음이라는 글자에 빨간색 표시 
+            echo "<li class='fo_re'>처음</li>"; //처음이라는 글자에 빨간색 표시 
           }else{
-            echo "<div><li><a href='?page=1'>처음</a></li></div>"; //알니라면 처음글자에 1번페이지로 갈 수있게 링크
+            echo "<li><a href='?page=1'>처음</a></li>"; //알니라면 처음글자에 1번페이지로 갈 수있게 링크
           }
           if($page <= 1)
           { //만약 page가 1보다 크거나 같다면 빈값
             
           }else{
           $pre = $page-1; //pre변수에 page-1을 해준다 만약 현재 페이지가 3인데 이전버튼을 누르면 2번페이지로 갈 수 있게 함
-            echo "<div><li><a href='?page=$pre'>이전</a></li></div>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
+            echo "<li><a href='?page=$pre'>이전</a></li>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
           }
           for($i=$block_start; $i<=$block_end; $i++){ 
             //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
             if($page == $i){ //만약 page가 $i와 같다면 
-              echo "<div><li class='fo_re'>[$i]</li></div>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
+              echo "<li class='fo_re'>[$i]</li>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
             }else{
-              echo "<div><li><a href='?page=$i'>[$i]</a></li></div>"; //아니라면 $i
+              echo "<li><a href='?page=$i'>[$i]</a></li>"; //아니라면 $i
             }
           }
           if($block_num >= $total_block){ //만약 현재 블록이 블록 총개수보다 크거나 같다면 빈 값
           }else{
             $next = $page + 1; //next변수에 page + 1을 해준다.
-            echo "<div><li><a href='?page=$next'>다음</a></li></div>"; //다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
+            echo "<li><a href='?page=$next'>다음</a></li>"; //다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
           }
           if($page >= $total_page){ //만약 page가 페이지수보다 크거나 같다면
-            echo "<div><li class='fo_re'>마지막</li></div>"; //마지막 글자에 긁은 빨간색을 적용한다.
+            echo "<li class='fo_re'>마지막</li>"; //마지막 글자에 긁은 빨간색을 적용한다.
           }else{
-            echo "<div><li><a href='?page=$total_page'>마지막</a></li></div>"; //아니라면 마지막글자에 total_page를 링크한다.
+            echo "<li><a href='?page=$total_page'>마지막</a></li>"; //아니라면 마지막글자에 total_page를 링크한다.
           }
         ?>
       </ul>
