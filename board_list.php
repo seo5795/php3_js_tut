@@ -1,7 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetest_godohosting_com");
 
-$sql = "SELECT * FROM aboard";
+$sql = "SELECT * FROM aboard ORDER BY nid DESC limit 10";
 $result = mysqli_query($conn, $sql);
 $list = '';
 while ($row = mysqli_fetch_array($result)) { // 등록한 글의 title을 보여주기 위한 list
