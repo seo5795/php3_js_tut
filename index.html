@@ -3,9 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript"
+	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bd7al82njv"></script>
 </head>
 <body>
 	<a href="login.php">로그인 하러가기</a>
-	<a href="board.php">게시글 보러가기</a>
+	<a href="board_list.php">게시글 보러가기</a>
+	<div id="map" style="width: 50%; height: 400px;"></div>
+	<script>
+		var mapOptions = {
+			center : new naver.maps.LatLng(37.3595704, 127.105399),
+			zoom : 10
+		};
+
+		var map = new naver.maps.Map('map', mapOptions);
+	</script>
 </body>
 </html>
