@@ -7,9 +7,16 @@
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bd7al82njv"></script>
 </head>
 <body>
-	<input type="button" value="hi" onclick="alert('hi')">
-	<input type="text" onchange="alert('changed')">
-	<input type="text" onkeydown="alert('key down')">
+	<input type="button" value="night"
+		onclick="
+		document.querySelector('body').style.backgroundColor='black';
+		document.querySelector('body').style.color='white';
+	">
+	<input type="button" value="day"
+		onclick="
+		document.querySelector('body').style.backgroundColor='white';
+		document.querySelector('body').style.color='black';
+	">
 	<hr>
 	<a href="login.php">로그인 하러가기</a>
 	<a href="board_list.php">게시글 보러가기</a>
