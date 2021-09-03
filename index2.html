@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+	.js{
+		font-weight: bold;
+		color:red;
+	}
+	
+	#first{
+		color: green;
+	}
+	span{
+		color:blue;
+	}
+</style>
+	<!-- 선택자: span, class는 그룹핑한다, id는 식별한다. id가 우선, > class > 태그  -->
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bd7al82njv"></script>
-</head>
-<h2 style="color:powderblue; background-color:coral">환영합니다!</h2>
-<body>
-	<input type="button" value="hi" onclick="alert('hi')">
-	<input type="text" onchange="alert('changed')">
-	<input type="text" onkeydown="alert('key down')">
-	<hr>
-	<a href="login.php">로그인 하러가기</a>
-	<a href="board_list.php">게시글 보러가기</a>
-	<div id="map" style="width: 50%; height: 400px;"></div>
-	<script>
-		var mapOptions = {
-			center : new naver.maps.LatLng(37.3595704, 127.105399),
-			zoom : 10
-		};
 
-		var map = new naver.maps.Map('map', mapOptions);
-	</script>
+</head>
+
+<body>
+	<h1>
+		<a href="index.html">WEB</a>
+	</h1>
+	<h2 style="background-color: coral; color: powderblue;">JavaScript</h2>
+	<p>
+		<span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]),
+		often abbreviated as JS, is a high-level, dynamic, weakly typed,
+		prototype-based, multi-paradigm, and interpreted programming language.
+		Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span>
+		is one of the three core technologies of World Wide Web content
+		production. It is used to make webpages interactive and provide online
+		programs, including video games. The majority of websites employ it,
+		and all modern web browsers support it without the need for plug-ins
+		by means of a built-in <span class="js">JavaScript</span> engine. Each
+		of the many <span class="js">JavaScript</span> engines represent a
+		different implementation of <span class="js">JavaScript</span>, all
+		based on the ECMAScript specification, with some engines not
+		supporting the spec fully, and with many engines supporting additional
+		features beyond ECMA.
+	</p>
 </body>
 </html>
