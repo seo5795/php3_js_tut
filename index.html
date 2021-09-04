@@ -11,12 +11,27 @@
 		onclick="
 		document.querySelector('body').style.backgroundColor='black';
 		document.querySelector('body').style.color='white';
+		
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+		while(i < alist.length){
+				alist[i].style.color = 'powderblue';
+				i=i+1;
+		}
 	">
 	<input type="button" value="day"
 		onclick="
 		document.querySelector('body').style.backgroundColor='white';
 		document.querySelector('body').style.color='black';
+		
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+		while(i < alist.length){
+				alist[i].style.color = 'blue';
+				i=i+1;
+		}
 	">
+	
 	<input type="button" value="night" onclick="
 	var target = document.querySelector('body');
 	if (this.value === 'night'){
@@ -25,15 +40,28 @@
 		this.value = 'day';
 		<!-- 1: .value: querySelector의 value값 -->
 		<!-- 2: document.querySelector('#night_day')를  태그안을 가르키는 키워드인 this로 바꾸면 유지보수성이 높아짐-->
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+		while(i < alist.length){
+				alist[i].style.color = 'powderblue';
+				i=i+1;
+		}
 	}else{
 		target.style.backgroundColor='white';
 		target.style.color='black';
 		this.value = 'night';
+		
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+		while(i < alist.length){
+				alist[i].style.color = 'blue';
+				i=i+1;
+		}
 		}
 		">
 	<hr>
-	<a href="login.php">로그인 하러가기</a>
-	<a href="board_list.php">게시글 보러가기</a>
+	<h2><a href="login.php">로그인 하러가기</a></h2>
+	<h2><a href="board_list.php">게시글 보러가기</a></h2>
 	<div id="map" style="width: 50%; height: 400px;"></div>
 	<script>
 		var mapOptions = {
