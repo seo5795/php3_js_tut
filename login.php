@@ -40,9 +40,16 @@ if (isset($_POST['id'])&&isset($_POST['password'])) {
 <html>
 <head>
 <meta charset="utf-8">
+<script src="color.html"></script>
 <title>Login Test</title>
 </head>
 <body>
+
+	<input type="button" value="night"
+		onclick="
+			   nightDayHandler(this);">
+			   
+	<hr>
 	 <h2>환영합니다!<?= $article['id']?>!</h2>
 	<form action="login.php" method="post">
 		<div><input type="text" name="id" placeholder="id를 입력하세요"></div> 

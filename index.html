@@ -1,42 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-var Links = {
-	    setColor:function(color){
-	      var alist = document.querySelectorAll('a');
-	      var i = 0;
-	      while(i < alist.length){
-	        alist[i].style.color = color;
-	        i = i + 1;
-	      }
-	    }
-	  }
-	  var Body = {
-	    setColor:function (color){
-	      document.querySelector('body').style.color = color;
-	    },<!--객체 의 프로퍼티를 구분할 때  ','로 구분함-->
-	    setBackgroundColor:function (color){
-	      document.querySelector('body').style.backgroundColor = color;
-	    }
-	  }
-	  function nightDayHandler(self){
-	    var target = document.querySelector('body');
-	    if(self.value === 'night'){
-	      Body.setBackgroundColor('black');
-	      Body.setColor('white');
-	      self.value = 'day';
-	      <!-- 1: .value: querySelector의 value값 -->
-			<!-- 2: document.querySelector('#night_day')를  태그안을 가르키는 키워드인 self로 바꾸면 유지보수성이 높아짐-->
-	      Links.setColor('powderblue');
-	    } else {
-	      Body.setBackgroundColor('white');
-	      Body.setColor('black');
-	      self.value = 'night';
-	      Links.setColor('blue');
-	    }
-	  }
-	</script>
+<script src="color.html"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript"
