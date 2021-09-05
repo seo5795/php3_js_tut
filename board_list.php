@@ -3,6 +3,7 @@ $conn = mysqli_connect("localhost", "hpeeragetest", "gksksla1225!", "hpeeragetes
 ?>
 <!doctype html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="color.html"></script>
 <meta charset="UTF-8">
 <title>게시판</title>

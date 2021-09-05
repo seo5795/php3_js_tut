@@ -40,6 +40,7 @@ if (isset($_POST['id'])&&isset($_POST['password'])) {
 <html>
 <head>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="color.html"></script>
 <title>Login Test</title>
 </head>
